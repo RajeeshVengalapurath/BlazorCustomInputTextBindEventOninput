@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<EditForm Model="PersonModel">
+    <CustomInputText @bind-Value="PersonModel.Name"></CustomInputText>
+</EditForm>
+
+@PersonModel.Name
+
+@code{
+    public Person PersonModel { get; set; } = new Person();
+    public class Person
+    {
+        public string Name { get; set; }
+    }
+}
